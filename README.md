@@ -14,7 +14,7 @@
         }
         .chart-container {
             position: relative;
-            width: 100%;
+            width: 200%;
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
