@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Esencial Para Vivir: La Gracia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #FC913A;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <section id="slide1" class="text-center min-h-screen flex flex-col justify-center items-center py-12">
+            <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF4E50] to-[#FC913A]">Lo Esencial para Vivir</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-600">Descubre el poder de la Gracia</p>
+        </section>
+
+        <section id="slide2" class="min-h-screen flex flex-col justify-center items-center text-center py-12">
+            <div class="bg-white p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#FF4E50]">La Gracia de Dios es para <span class="underline decoration-wavy decoration-[#FC913A]">TODOS</span></h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-700">No importa quién eres o qué has hecho, el amor de Dios y su gracia están disponibles para ti. No es algo exclusivo para un grupo selecto de personas; ¡es una invitación abierta para todo el mundo!</p>
+                <blockquote class="mt-6 border-l-4 border-[#F9D423] pl-4 italic text-gray-600">
+                    "La promesa se recibe por medio de la fe. Es un regalo inmerecido... todos estamos seguros de recibir esta promesa si tenemos una fe como la de Abraham." - Romanos 4:16 (NTV)
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="slide3" class="min-h-screen flex flex-col justify-center py-12">
+            <h2 class="text-4xl font-bold text-center mb-12 text-[#FF4E50]">¿Cómo funciona la Gracia?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-red-100 p-6 rounded-2xl shadow-lg border-2 border-red-200">
+                    <h3 class="text-2xl font-bold text-red-600 mb-4 flex items-center"><span class="text-3xl mr-3">❌</span>Así NO funciona</h3>
+                    <ul class="space-y-3 text-red-800">
+                        <li class="flex items-start"><span class="font-bold mr-2">1.</span> Intentando ser "suficientemente bueno".</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">2.</span> Haciendo muchas actividades religiosas.</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">3.</span> Comparándote con los demás para sentirte mejor.</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">4.</span> Creyendo que tienes que "ganarte" el favor de Dios.</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 p-6 rounded-2xl shadow-lg border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4 flex items-center"><span class="text-3xl mr-3">✔️</span>Así SÍ funciona</h3>
+                    <ul class="space-y-3 text-green-800">
+                        <li class="flex items-start"><span class="font-bold mr-2">1.</span> Es un regalo totalmente GRATIS.</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">2.</span> Solo necesitas aceptarlo con fe.</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">3.</span> No depende de tus obras, sino del amor de Dios.</li>
+                        <li class="flex items-start"><span class="font-bold mr-2">4.</span> Es para todos, sin excepciones.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide4" class="min-h-screen flex flex-col justify-center items-center text-center py-12">
+             <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl">
+                <h2 class="text-3xl font-bold text-[#FF4E50] mb-4">Un Regalo, no un Pago</h2>
+                <p class="text-lg text-gray-600 mb-8">La gracia no es algo que puedas ganar. Imagina que es un pastel: el 100% es un regalo de Dios, y el 0% es tu esfuerzo. ¡Solo tienes que recibirlo!</p>
+                <div class="chart-container">
+                    <canvas id="graceChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="slide5" class="min-h-screen flex flex-col justify-center items-center text-center py-12">
+            <h2 class="text-4xl font-bold text-center mb-12 text-[#FF4E50]">El Modelo a Seguir: La Fe de Abraham</h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl">La Biblia nos pone el ejemplo de Abraham. Él no recibió la promesa de Dios por ser perfecto, sino porque confió en Él. ¡Ese mismo camino está disponible para nosotros!</p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <p class="text-5xl mb-2">🚶‍♂️</p>
+                    <h3 class="text-xl font-bold text-[#FC913A]">Abraham</h3>
+                    <p class="text-gray-600">Tuvo Fe</p>
+                </div>
+                <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <p class="text-5xl mb-2">🎁</p>
+                    <h3 class="text-xl font-bold text-[#FC913A]">Recibió</h3>
+                    <p class="text-gray-600">La Promesa de Dios</p>
+                </div>
+                <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <p class="text-5xl mb-2">🙋‍♀️🙋‍♂️</p>
+                    <h3 class="text-xl font-bold text-[#FC913A]">Nosotros</h3>
+                    <p class="text-gray-600">Tenemos Fe</p>
+                </div>
+                 <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <p class="text-5xl mb-2">💖</p>
+                    <h3 class="text-xl font-bold text-[#FC913A]">Recibimos</h3>
+                    <p class="text-gray-600">La misma Promesa</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide6" class="min-h-screen flex flex-col justify-center items-center py-12">
+            <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-4xl">
+                <h2 class="text-3xl font-bold text-center text-[#FF4E50] mb-4">Rompiendo Barreras</h2>
+                <p class="text-lg text-center text-gray-600 mb-8">En el pasado, algunos pensaban que las promesas de Dios eran solo para el pueblo judío. Pero la buena noticia es que la gracia de Dios es tan grande que rompe todas las barreras. ¡Es para todos!</p>
+                <div class="chart-container h-80 max-h-96">
+                    <canvas id="availabilityChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide7" class="min-h-screen flex flex-col justify-center items-center py-12">
+            <h2 class="text-4xl font-bold text-center mb-12 text-[#FF4E50]">Del Rechazo a la Aceptación</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4">La Carga de la Vergüenza</h3>
+                    <p class="text-gray-600 mb-6">A veces, los errores del pasado o palabras hirientes nos hacen sentir rechazados y avergonzados. Cargamos con un peso que nos impide avanzar y aceptar el amor de Dios.</p>
+                    <span class="text-6xl">😔</span>
+                </div>
+                <div class="bg-gradient-to-br from-[#FF4E50] to-[#FC913A] text-white p-8 rounded-2xl shadow-2xl text-center flex flex-col items-center">
+                    <h3 class="text-2xl font-bold mb-4">El Abrazo de Jesús</h3>
+                    <p class="mb-6">Pero hay alguien que NUNCA te rechazará: Jesucristo. Él te dice "ven a casa". Con Él puedes soltar esa carga. Cuanto más entiendes su gracia, más quieres estar cerca de Él.</p>
+                    <span class="text-6xl">🤗</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide8" class="min-h-screen flex flex-col justify-center items-center text-center py-12">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-3xl mx-auto border-4 border-[#F9D423]">
+                 <h2 class="text-3xl font-bold text-[#FF4E50] mb-4">¿Quieres Aceptar este Regalo?</h2>
+                 <p class="text-lg text-gray-600 mb-8">Si estás listo para creer en Jesús y aceptar el regalo de su gracia, puedes hacer esta oración con todo tu corazón:</p>
+                 <div class="text-left text-gray-700 bg-gray-50 p-6 rounded-lg">
+                    <p><strong>"Querido Jesús,</strong> has prometido que si creo en ti, todo lo que he hecho mal será perdonado, conoceré el propósito de mi vida y un día me recibirás en tu hogar eterno en el cielo. Confieso mis pecados y creo que eres mi Salvador.</p>
+                    <p class="mt-4">Te recibo en mi vida como mi Señor. Quiero usar el resto de mi vida para servirte. Te entrego mi vida y te pido que me salves y me aceptes en tu familia. En tu nombre, Amén".</p>
+                 </div>
+                 <button id="prayer-button" class="mt-8 px-8 py-3 bg-gradient-to-r from-[#FF4E50] to-[#FC913A] text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                     ✨ Explora la Oración ✨
+                 </button>
+                 <div id="gemini-response" class="mt-8 text-left text-gray-700 p-6 rounded-lg bg-gray-100 hidden"></div>
+            </div>
+        </section>
+
+        <section id="slide9" class="min-h-screen flex flex-col justify-center items-center py-12">
+             <h2 class="text-4xl font-bold text-center mb-12 text-[#FF4E50]">¿Y Ahora Qué?</h2>
+             <div class="space-y-6 max-w-3xl w-full">
+                 <div class="bg-white p-6 rounded-2xl shadow-lg">
+                     <h3 class="font-bold text-xl text-[#FC913A]">Reflexiona Sobre Esto:</h3>
+                     <p class="mt-2 text-gray-700">La gracia es un regalo. Sabiendo esto, ¿cómo cambia la forma en que quieres responderle a Dios?</p>
+                 </div>
+                 <div class="bg-white p-6 rounded-2xl shadow-lg">
+                      <h3 class="font-bold text-xl text-[#FC913A]">Sé Honesto:</h3>
+                     <p class="mt-2 text-gray-700">¿Hay alguna culpa, vergüenza o recuerdo del pasado que te impide aceptar completamente la gracia de Dios? ¿Se lo has entregado a Él?</p>
+                 </div>
+                  <div class="bg-white p-6 rounded-2xl shadow-lg">
+                      <h3 class="font-bold text-xl text-[#FC913A]">Piensa en Alguien:</h3>
+                     <p class="mt-2 text-gray-700">¿A quién puedes compartirle esta increíble noticia de que la gracia de Dios también está disponible para ellos?</p>
+                 </div>
+             </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+
+            const graceCtx = document.getElementById('graceChart').getContext('2d');
+            const graceChart = new Chart(graceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Regalo de Dios', 'Tu Esfuerzo'],
+                    datasets: [{
+                        label: 'Composición de la Gracia',
+                        data: [100, 0],
+                        backgroundColor: [
+                            '#FF4E50',
+                            '#E5E7EB'
+                        ],
+                        borderColor: [
+                            '#FFFFFF',
+                            '#FFFFFF'
+                        ],
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: 'Poppins'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+
+            const availabilityCtx = document.getElementById('availabilityChart').getContext('2d');
+            const availabilityChart = new Chart(availabilityCtx, {
+                type: 'bar',
+                data: {
+                    labels: [['Pueblo Judío', '(Bajo la Ley)'], ['     Demás Pueblos', '(Nosotros)']],
+                    datasets: [{
+                        label: 'Gracia Disponible',
+                        data: [100, 100],
+                        backgroundColor: [
+                            '#FC913A',
+                            '#FF4E50',
+                        ],
+                        borderRadius: 8,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 110,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                },
+                                font: {
+                                    size: 12,
+                                    family: 'Poppins'
+                                }
+                            }
+                        },
+                        y: {
+                           ticks: {
+                                font: {
+                                    size: 14,
+                                    family: 'Poppins'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                             callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    return ` Disponibilidad: ${context.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
